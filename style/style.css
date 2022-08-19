@@ -2,24 +2,36 @@
     box-sizing: border-box;
 }
 
+/* 001 */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* 001 */
+
 header {
     background-color: darkblue;
 }
+
+/* 010 */
 
 .wrapper {
     width: 70%;
     margin: auto;
 }
 
+/* 010 */
+/* разместил в строку все элементы в header */
+
 .wrapper__nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
+/* 011 */
+/* стилизация лого */
 
 .wrapper__nav>a {
     display: flex;
@@ -30,11 +42,16 @@ header {
     text-transform: uppercase;
 }
 
+/* 010 */
+
 .menu {
     width: 75%;
     font-size: 0;
     text-align: center;
 }
+
+/* 010 */
+/* стилизация меню с помощью inline-block */
 
 .menu__item {
     width: 20%;
@@ -44,6 +61,8 @@ header {
     position: relative;
 }
 
+/* 010 */
+
 .menu__link,
 .submenu__link {
     width: 100%;
@@ -51,9 +70,14 @@ header {
     color: #fff;
 }
 
+/* 020 */
+
 .menu__item:hover {
     background-color: black;
 }
+
+/* 010 */
+/* скрываем submenu, задаем максимальную высоту 0 на входе и 550px на выходе для создания анимации с плавным отображением submenu (альтернатива display:none). Также, применяем overflow:hidden для того, чтобы вместить нужное количество блоков в зависимости от высоты */
 
 .submenu {
     display: block;
@@ -68,6 +92,8 @@ header {
     overflow: hidden;
 }
 
+/* 010 */
+
 .submenu__item {
     display: flex;
     flex-direction: column;
@@ -75,18 +101,27 @@ header {
     font-size: 1.2rem;
 }
 
+/* 010 */
+
 .submenu__link {
     padding: 15% 0;
 }
+
+/* 030 */
+/* задаем нужную высоту для отображения всех блоков в submenu */
 
 .menu__item:hover .submenu {
     max-height: 550px;
     transition: max-height 0.45s ease-in;
 }
 
+/* 020 */
+
 .submenu__link:hover {
     background-color: black;
 }
+
+/* 001 */
 
 h1 {
     padding: 2% 0;
@@ -95,26 +130,39 @@ h1 {
     font-weight: 700;
 }
 
+/* 001 */
+
 p {
     font-size: 1.5rem;
     line-height: 1.5;
     text-align: justify;
 }
 
+/* 010 */
+/* добавил галерею с помощью display:grid, где:
+grid-gap - устанавливает отступы между блоками
+grid-template-columns: repeat(16, 4fr) - устанавливает условную ширину колонок - 16 колонок где 1 колонка занимает 1/4 часть
+grid-template-rows - устанавливает высоту строк */
+
 .grid {
     margin: 3% auto 0;
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(16, 4fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-auto-rows: 20%;
+    grid-template-rows: 5%;
+    grid-auto-rows: 15%;
     grid-auto-columns: 10%;
 }
+
+/* 010 */
+/* свойство span применяется для объединения количества колонок и строк */
 
 .grid__item {
     grid-column: span 4;
     grid-row: span 2;
 }
+
+/* 011 */
 
 .grid__item>img {
     width: 100%;
@@ -122,10 +170,14 @@ p {
     object-fit: cover;
 }
 
+/* 010 */
+
 .test {
     grid-column: span 8;
     grid-row: span 3;
 }
+
+/* 010 */
 
 .test__two {
     grid-column: span 8;
