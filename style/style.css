@@ -43,3 +43,28 @@ header {
     font-size: 1.2rem;
     position: relative;
 }
+
+.menu__link,
+.submenu__link {
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu__item:hover {
+    background-color: black;
+}
+
+.submenu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+    max-height: 0;
+    transition: max-height 0.15 ease-out;
+    overflow: hidden;
+}
+
